@@ -1,4 +1,6 @@
-
+inspired by gearman
+but i want make worker can give a task to other worker..
+no client-worker, but client-client.. we are team!
 
 business process model:
 ################################################
