@@ -50,6 +50,10 @@ class kekesrukan_client extends abstractKekesrukan_client{
 			exit("Error on connecting to [{$this->config['ip']}:{$this->config['port']}]\n");
 	}
 	
+	public function __destruct(){
+		@socket_close($this->socket);
+	}
+	
 	public function registerFunction($function, $callback){
 		if(!isset($this->function[$function])){
 			$this->function[$function] = array(
